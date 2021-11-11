@@ -1,6 +1,8 @@
 package com.foothill;
 import java.util.*;
-//BFSProgram.java
+// BFSProgram.java
+// Author: Erik Rodriguez
+
 public class BFSProgram {
     public static void main(String[] args) {
         Character[] values1 = {'S', 'A', 'B', 'C', 'D'};
@@ -27,9 +29,8 @@ public class BFSProgram {
                 {11, 8}, {11, 9}, {11, 10}
         };
         Graph<Character> g1 = new Graph<>(values1, edges1);
-        System.out.println(26);
         Graph<String> g2 = new Graph<>(values2, edges2);
-        System.out.println(27);
+
         System.out.println(g1.breadthFirstSearchOrder(0));
         System.out.println(g1.breadthFirstSearchOrder(4));
         System.out.println(g1.breadthFirstSearchOrder(3));
@@ -40,5 +41,10 @@ public class BFSProgram {
 }
 
 /*
-[paste output here]
+[S, A, B, C, D]
+[D, A, B, C, S]
+[C, S, D, A, B]
+[Seattle, San Francisco, Denver, Chicago, Los Angeles, Kansas City, Boston, New York, Dallas, Atlanta, Houston, Miami]
+[Chicago, Seattle, Denver, Kansas City, Boston, New York, San Francisco, Los Angeles, Atlanta, Dallas, Miami, Houston]
+[Miami, Atlanta, Houston, Kansas City, New York, Dallas, Los Angeles, Denver, Chicago, Boston, San Francisco, Seattle]
 */

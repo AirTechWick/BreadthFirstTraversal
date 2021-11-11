@@ -2,6 +2,7 @@ package com.foothill;
 
 import java.util.ArrayList;
 
+// This class contains a list of nodes and their connections with each other
 public class Node<E> {
     private E value;
     private boolean visited = false;
@@ -23,8 +24,12 @@ public class Node<E> {
         this.visited = visited;
     }
 
-    public void addEdge(int e)
-    {
+    public String toString() {
+        return value.toString();
+    }
+
+    // adds a point that is connected to the current node indicating an edge
+    public void addEdge(int e) {
         if (edgesIsEmpty())
             edges = new ArrayList<>();
 
@@ -39,7 +44,7 @@ public class Node<E> {
     }
 
     public boolean edgesIsEmpty() {
-        if (edges == null){
+        if (edges == null) {
             return true;
         }
 
